@@ -1,0 +1,15 @@
+
+homepageurl: localhost
+
+adminuser: sadikshya@gmail.com
+           adhelp@gmail.com
+
+adminpass: sadi123
+           helper
+
+nonadminuser: TAYLOR@GMAIL.COM
+   
+
+nonadminpassword: swift
+
+*Note :non admin user can register themselves and login into the website*

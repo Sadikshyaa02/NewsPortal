@@ -1,0 +1,94 @@
+-- Adminer 4.8.1 MySQL 8.0.30 dump
+
+SET NAMES utf8;
+SET time_zone = '+00:00';
+SET foreign_key_checks = 0;
+SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
+
+SET NAMES utf8mb4;
+
+CREATE DATABASE assignment1;
+USE assignment1 ;
+
+DROP TABLE IF EXISTS `admins`;
+CREATE TABLE `admins` (
+  `admin_id` int NOT NULL AUTO_INCREMENT,
+  `admin_name` varchar(30) NOT NULL,
+  `admin_surname` varchar(25) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(70) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  PRIMARY KEY (`admin_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+INSERT INTO `admins` (`admin_id`, `admin_name`, `admin_surname`, `email`, `password`) VALUES
+(1,	'Sadikshya',	'Baral',	'sadikshya@gmail.com',	'sadi123'),
+(4,	'Admin',	'Helper',	'adhelp@gmail.com',	'helper');
+
+DROP TABLE IF EXISTS `article`;
+CREATE TABLE `article` (
+  `article_id` int NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) NOT NULL,
+  `category` varchar(30) NOT NULL,
+  `publisher` varchar(50) NOT NULL,
+  `published_date` date NOT NULL,
+  `content` varchar(3000) NOT NULL,
+  `image` varchar(255) NOT NULL,
+  PRIMARY KEY (`article_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+INSERT INTO `article` (`article_id`, `title`, `category`, `publisher`, `published_date`, `content`, `image`) VALUES
+(1,	'Nightmare’ TV show ‘Euphoria’ — health threat or high art?',	'Entertainment',	'sadikshya@gmail.com',	'2022-09-25',	'Yet critic Eddy Chen, along with millions of Americans, loves the award-winning show, which follows American teenagers through their experiences of drugs, trauma, self-harm, love and sex.\r\nOutraged, the conservative media advocacy group Parents Television and Media Council (PTMA) has called the series “dark, depraved, degenerate and nihilistic” and asked the pay television network HBO to end it.',	'artimage/'),
+(2,	' European Soccer',	'Sports',	'sadikshya@gmail.com',	'2019-04-21',	'LONDON  A dozen of the worlds richest and most storied soccer clubs on Sunday announced that they had formed a breakaway European club competition that would, if it comes to fruition, upend the structures, economics and relationships that have bound global soccer for nearly a century.\r\n\r\nAfter months of secret talks, the breakaway teams  which include Real Madrid and Barcelona in Spain; Manchester United and Liverpool in England; and Juventus and A.C. Milan in Italy  confirmed their plans late Sunday. They said they planned to add at least three more founding members, hold midweek matches that would put the league in direct competition with the existing Champions League, and begin play as soon as practicable.\r\n\r\nWe will help football at every level and take it to its rightful place in the world, said Real Madrid President Florentino Prez, who was named the first chairman of what the clubs were calling the Super League.',	'artimage/football.jpg'),
+(4,	'Europe in calling for mental health promotion in COVID-19 recovery',	'Health',	'adhelp@gmail.com',	'2022-09-20',	'Over the past 3 years, the COVID-19 pandemic has brought mental health under the public eye, with millions of people suffering from major depressive and anxiety disorders. Now, as the pandemic comes under control in the WHO European Region, WHO/Europe is urging governments to keep mental health at the top of the health and political agendas in the recovery phase. Gathered at a meeting hosted by WHO/Europe and the Danish Health Authority in Copenhagen on 19 September, advocates and experts from the Nordic and Baltic regions met to share ideas and experiences on how to maintain and improve mental health services for the nearly 35 million people living in this sub-region. This was the first meeting of its kind among representatives from this group of countries. ',	'artimage/hea.jpg'),
+(5,	'Makers Beyond the IT Department',	'Technology',	'sadikshya@gmail.com',	'2022-05-07',	'Sometimes IT fails to comprehend the perspective of the business. Those in IT may not be fully apprised of what the company does and how its employees operate. They may not appreciate the fine details of the processes that apply to both front-end and back-end tasks. This can lead to alteration of needs and pushback on project deliverables.Therefore, it’s vital that IT works diligently to achieve a 360-view of the business, particularly related to the projects at hand. When IT is developing a new application, for example, the key IT personnel involved must take the time to get to know all the internal and external stakeholders that will be impacted. They must find out why the business needs this specific application, determine what the business demands from it, and obtain input from all relevant parties.',	'artimage/tech.jpg'),
+(6,	' TV show ‘Euphoria',	'Entertainment',	'sadikshya@gmail.com',	'2022-04-21',	'“A parent’s worst nightmare.”\r\nThat’s how the TV critic for National Public Radio in the United States described the American teen drama television series “Euphoria.”Yet critic Eddy Chen, along with millions of Americans, loves the award-winning show, which follows American teenagers through their experiences of drugs, trauma, self-harm, love and sex.\r\nOutraged, the conservative media advocacy group Parents Television and Media Council (PTMA) has called the series “dark, depraved, degenerate and nihilistic” and asked the pay television network HBO to end it.',	'artimage/euphoria.jpg'),
+(8,	'WorldCup 2022: This is your quick guide to Poland - form, fixtures and players to watch',	'Sports',	'sadikshya@gmail.com',	'2022-06-11',	'After finishing bottom of their group at the 2018 FIFA World Cup, Poland replaced their manager Adam Nawaka with Jerzy Brzczek, and they steered safely through qualifying to reach this summer\'s tournament.\r\n\r\nBut, despite Poland winning their group with relative ease, Brzczek was replaced in January by former Portugal international Paulo Sousa.\r\n\r\nOn the pitch, matters have been more stable for Poland and their rebuilt squad features a number of promising prospects, many of whom ply their trade in Europe\'s top five leagues.\r\n\r\nUndoubtedly all eyes will focus on star striker Robert Lewandowski, who has so far only scored twice for his country in three major tournaments.\r\n\r\nWhat is Poland\'s best previous performance at a European Championship?\r\nQuarter-finals (2016)\r\n\r\n\r\nHow did Poland qualify for EURO 2020?\r\nBy winning Group G with a record of P10 W8 D1 L1 F18 A5.\r\n\r\nWhat kind of form are Poland in?\r\nLast six games: DDLWDL\r\n\r\n\r\nWho is one Polish player you might have heard of?\r\nRobert Lewandowski: Poland\'s most-capped player and all-time leading goalscorer netted 41 times in the Bundesliga for Bayern Munich this season and was named Best FIFA Men\'s Player in 2020.\r\n\r\nWho is one Polish player who could impress at EURO 2020?\r\nPiotr Zieliski: The highly-rated Napoli midfielder scored eight goals in a career-best Serie A season and has been a regular for his country since 2013.',	'artimage/worldcup.jpg'),
+(9,	'Boat capsize in Bangladesh kills at least 24 Hindu pilgrims',	'Religion',	'adhelp@gmail.com',	'2022-04-03',	'DHAKA, Bangladesh -- A boat carrying about 100 Hindu pilgrims capsized Sunday in a river in northern Bangladesh, leaving at least 24 people dead, police said.The overcrowded boat overturned in the afternoon while returning from a Hindu temple on the other side of the River Karatoa at Boda area in Panchagarh district, said local police chief S.M. Sirajul Huda.Divers and residents recovered at least 24 bodies by Sunday evening, he said, adding that at least 12 women and eight children were among the dead. He said many of the passengers swam ashore.',	'artimage/re.jpg'),
+(13,	'Democrats Craft Budget Plans as Infrastructure Talks Continue',	'Politics',	'sadikshya@gmail.com',	'2022-07-13',	'WASHINGTONSenior Democrats said they hoped to pass budget resolutions by the end of July, teeing up for late summer and early fall a package that could determine the scope of President Bidens legislative ambitions on infrastructure and social programs.\r\n\r\nAt the same time, Congress will likely have to juggle key spending bills and legislation to raise the countrys borrowing limit, aligning must-pass legislation with a period of high-stakes internal negotiations.\r\n\r\nIn an interview this week, House Budget Committee Chairman John Yarmuth (D., Ky.) said he was working on a fiscal year 2022 budget resolution that he hoped to send to the House floor for a vote by the end of July. Senate Budget Committee Chairman Bernie Sanders (I., Vt.) said he hoped we can get it done by then as well.\r\n\r\n\r\nAlthough the budget blueprint is typically a largely symbolic document, it holds unusual significance this year. It is the necessary first step if Democrats want to pass all or part of Mr. Bidens infrastructure and anti-poverty proposals without GOP support.\r\n\r\nSenate Democrats said this week they were moving forward with a process tied to the budget known as reconciliation that allows them to pass legislation with just a simple majority, rather than the 60 votes most bills require.',	'artimage/pol.jpg'),
+(15,	'Her majesty Queen Elizabeth II died',	'World',	'sadikshya@gmail.com',	'2022-09-08',	'many years, perhaps decades, the republican cause in this country has held its breath while effectively waiting for Queen Elizabeth II to draw the last of her own. If that sounds insensitive, it is in fact a testament to the strength, as well as the longevity, of her reign. Earlier this year, leading up to the Queen’s platinum jubilee, I spent a fruitless couple of days attempting to elicit the views of serving politicians who were known or thought to have republican sympathies. Hardly any responded and only one would go on the record. That exception was Clive Lewis, the Labour MP and 2020 party leadership candidate, who articulated the problem of being an open republican. “The Queen is seen as someone who is hard working, humble, etc,” he said. “I think that makes it very difficult for the republican argument to be put forward. But I think when she does pass away, that will open up the possibility of conversations about the future of our democracy.”',	'artimage/queen.jpg'),
+(17,	'This face mask can sense the presence of an airborne virus',	'Science',	'sadikshya@gmail.com',	'2022-08-25',	'Face masks — the unofficial symbol of the COVID-19 pandemic — are leveling up.A mask outfitted with special electronics can detect SARS-CoV-2, the virus that causes COVID-19, and other airborne viruses within 10 minutes of exposure, materials researcher Yin Fang and colleagues  in Matter.',	'artimage/sci.jpg');
+
+DROP TABLE IF EXISTS `category`;
+CREATE TABLE `category` (
+  `category_id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `description` varchar(200) NOT NULL,
+  PRIMARY KEY (`category_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+INSERT INTO `category` (`category_id`, `name`, `description`) VALUES
+(1,	'Religion',	''),
+(3,	'Sports',	'News related to sports and games fall in this category'),
+(5,	'Politics',	'News related to politics and political activities fall in this category.'),
+(6,	'Technology',	'World in tech'),
+(7,	'Entertainment',	'News related to entertainment world'),
+(8,	'World',	'Provides news from around the world'),
+(9,	'Health',	'Health related news');
+
+DROP TABLE IF EXISTS `comment`;
+CREATE TABLE `comment` (
+  `comment_id` int NOT NULL AUTO_INCREMENT,
+  `viewer_id` int NOT NULL,
+  `article_id` int NOT NULL,
+  `content` varchar(100) NOT NULL,
+  `date` date NOT NULL,
+  PRIMARY KEY (`comment_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+INSERT INTO `comment` (`comment_id`, `viewer_id`, `article_id`, `content`, `date`) VALUES
+(1,	1,	1,	'This is sad',	'2022-09-18'),
+(3,	2,	7,	'Please improve your articles',	'2022-09-21'),
+(6,	6,	3,	'Nice',	'2022-09-25');
+
+DROP TABLE IF EXISTS `viewers`;
+CREATE TABLE `viewers` (
+  `viewer_id` int NOT NULL AUTO_INCREMENT,
+  `email` varchar(50) NOT NULL,
+  `viewer_name` varchar(30) NOT NULL,
+  `surname` varchar(25) NOT NULL,
+  `password` varchar(70) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  PRIMARY KEY (`viewer_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- 2022-09-25 17:30:27
